@@ -51,40 +51,10 @@ export default function App() {
     return () => el.removeEventListener('scroll', updateProgress);
   }, [updateProgress]);
 
-  const goTo = (index) => {
-    const el = containerRef.current;
-    if (!el) return;
-    el.scrollTo({ top: index * window.innerHeight, behavior: 'smooth' });
-  };
-
   return (
     <>
       <MatrixBackground />
       <ProgressBar progress={progress} />
-
-      <nav className="navigation" aria-label="Navegación por diapositivas">
-        <button
-          type="button"
-          className="nav-btn"
-          disabled={currentIndex === 0}
-          onClick={() => goTo(currentIndex - 1)}
-          aria-label="Diapositiva anterior"
-        >
-          ←
-        </button>
-        <span className="slide-indicator" aria-live="polite">
-          {currentIndex + 1} / {totalSlides}
-        </span>
-        <button
-          type="button"
-          className="nav-btn"
-          disabled={currentIndex >= totalSlides - 1}
-          onClick={() => goTo(currentIndex + 1)}
-          aria-label="Diapositiva siguiente"
-        >
-          →
-        </button>
-      </nav>
 
       <div
         ref={containerRef}

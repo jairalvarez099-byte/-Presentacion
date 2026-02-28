@@ -111,47 +111,62 @@ export default function App() {
           <div className="icon-pulse">📧</div>
           <h2>PELIGRO INVISIBLE #1</h2>
           <h3 className="danger-title">PHISHING</h3>
-          <div className="examples-grid">
-            <div className="example-card">
-              <div className="example-icon">🏦</div>
-              <h4>Ejemplo 1: Tu &quot;banco&quot; te escribe</h4>
-              <div className="email-card fake">
-                <div className="email-header">
-                  <span className="sender">Banco Santander</span>
-                  <span className="urgency">⚠️ URGENTE</span>
+          <p className="phishing-intro">Así se ve el phishing en la práctica. Revisa estos ejemplos:</p>
+
+          <div className="phishing-examples">
+            <section className="phishing-section" aria-labelledby="phishing-email-title">
+              <h4 id="phishing-email-title" className="phishing-section-title">📧 Por correo</h4>
+              <div className="phishing-cards-row">
+                <div className="example-card phishing-card">
+                  <span className="phishing-badge">Ejemplo 1</span>
+                  <div className="example-icon">🏦</div>
+                  <h4>Tu &quot;banco&quot; te escribe</h4>
+                  <div className="email-card fake">
+                    <div className="email-header">
+                      <span className="sender">Banco Santander</span>
+                      <span className="urgency">⚠️ URGENTE</span>
+                    </div>
+                    <p className="email-subject">Tu cuenta será bloqueada en 24 horas</p>
+                    <p className="email-body">&quot;Haz clic aquí para verificar: <span className="fake-link">bancosantander.verifica-seguridad.com</span>&quot;</p>
+                  </div>
+                  <p className="example-reality">🔍 <strong>La realidad:</strong> El banco NUNCA pide datos por email</p>
                 </div>
-                <p className="email-subject">Tu cuenta será bloqueada en 24 horas</p>
-                <p className="email-body">&quot;Haz clic aquí para verificar: <span className="fake-link">bancosantander.verifica-seguridad.com</span>&quot;</p>
-              </div>
-              <p className="example-reality">🔍 <strong>La realidad:</strong> El banco NUNCA pide datos por email</p>
-            </div>
-            <div className="example-card">
-              <div className="example-icon">📦</div>
-              <h4>Ejemplo 2: El paquete &quot;perdido&quot;</h4>
-              <div className="email-card fake">
-                <div className="email-header">
-                  <span className="sender">Correos Express</span>
-                  <span className="urgency">📦 ENTREGA</span>
+                <div className="example-card phishing-card">
+                  <span className="phishing-badge">Ejemplo 2</span>
+                  <div className="example-icon">📦</div>
+                  <h4>El paquete &quot;perdido&quot;</h4>
+                  <div className="email-card fake">
+                    <div className="email-header">
+                      <span className="sender">Correos Express</span>
+                      <span className="urgency">📦 ENTREGA</span>
+                    </div>
+                    <p className="email-subject">Tu paquete está retenido en aduanas</p>
+                    <p className="email-body">&quot;Paga 2€ para liberarlo: <span className="fake-link">correos.pago-online.com</span>&quot;</p>
+                  </div>
+                  <p className="example-reality">🔍 <strong>La realidad:</strong> Pagas 2€ y te vacían la cuenta</p>
                 </div>
-                <p className="email-subject">Tu paquete está retenido en aduanas</p>
-                <p className="email-body">&quot;Paga 2€ para liberarlo: <span className="fake-link">correos.pago-online.com</span>&quot;</p>
               </div>
-              <p className="example-reality">🔍 <strong>La realidad:</strong> Pagas 2€ y te vacían la cuenta</p>
-            </div>
-            <div className="example-card">
-              <div className="example-icon">📱</div>
-              <h4>Ejemplo 3: El SMS del &quot;banco&quot;</h4>
-              <div className="sms-card">
-                <div className="sms-header">
-                  <span className="sms-sender">CaixaBank</span>
-                  <span className="sms-time">Ahora</span>
+            </section>
+
+            <section className="phishing-section" aria-labelledby="phishing-sms-title">
+              <h4 id="phishing-sms-title" className="phishing-section-title">📱 Por SMS</h4>
+              <div className="example-card phishing-card phishing-card-sms">
+                <span className="phishing-badge">Ejemplo 3</span>
+                <div className="example-icon">📱</div>
+                <h4>El SMS del &quot;banco&quot;</h4>
+                <div className="sms-card">
+                  <div className="sms-header">
+                    <span className="sms-sender">CaixaBank</span>
+                    <span className="sms-time">Ahora</span>
+                  </div>
+                  <p className="sms-body">&quot;Se ha detectado un acceso sospechoso. Confirma tu identidad: https://cai.xa.bank/verificar&quot;</p>
                 </div>
-                <p className="sms-body">&quot;Se ha detectado un acceso sospechoso. Confirma tu identidad: https://cai.xa.bank/verificar&quot;</p>
+                <p className="example-reality">🔍 <strong>La realidad:</strong> El enlace es falso (cai.xa.bank no es caixabank.es)</p>
               </div>
-              <p className="example-reality">🔍 <strong>La realidad:</strong> El enlace es falso (fíjate: cai.xa.bank no es caixabank.es)</p>
-            </div>
+            </section>
           </div>
-          <div className="tip-card">
+
+          <div className="tip-card phishing-tip">
             <p>⚠️ <strong>Los 3 errores que delatan un phishing:</strong></p>
             <ul className="tip-list">
               <li>1️⃣ Te genera URGENCIA (tiempo límite)</li>

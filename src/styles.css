@@ -445,6 +445,63 @@ h4 {
     color: #e8ecf0;
 }
 
+/* Phishing slide: organización de ejemplos */
+.phishing-intro {
+    margin: 0 auto 1.25rem;
+    max-width: 560px;
+    font-size: 1rem;
+    color: var(--cyber-muted);
+}
+
+.phishing-examples {
+    margin: 1.5rem 0;
+}
+
+.phishing-section {
+    margin-bottom: 1.75rem;
+}
+
+.phishing-section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    color: var(--cyber-cyan);
+    margin-bottom: 0.75rem;
+    text-align: left;
+}
+
+.phishing-cards-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.phishing-card {
+    text-align: left;
+}
+
+.phishing-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--cyber-cyan);
+    border: 1px solid var(--cyber-border);
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.phishing-card-sms {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.phishing-tip {
+    margin-top: 1.5rem;
+}
+
 /* SMS Card - contraste alto */
 .sms-card {
     background: rgba(22, 38, 52, 0.95);
@@ -1460,6 +1517,14 @@ h4 {
     
     .examples-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .phishing-cards-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .phishing-section-title {
+        text-align: center;
     }
     
     .osint-cycle {

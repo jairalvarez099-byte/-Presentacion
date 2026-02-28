@@ -1,4 +1,14 @@
 (function(){
+  // Fondo matrix: rejilla de 0 y 1
+  var mb=document.getElementById('matrixBg');
+  if(mb){
+    var cols=28,rows=40,s='';
+    for(var r=0;r<rows;r++){
+      for(var col=0;col<cols;col++) s+='<span class="matrix-digit">'+(Math.random()>0.5?'0':'1')+'</span>';
+      s+='<br>';
+    }
+    mb.innerHTML=s;
+  }
   var c=document.getElementById('slidesContainer'),p=document.getElementById('progressBar'),cur=document.getElementById('currentSlide'),tot=document.getElementById('totalSlides');
   var slides=document.querySelectorAll('.slide'),total=slides.length;
   if(tot)tot.textContent=total;
@@ -28,7 +38,7 @@
   var rev=document.getElementById('revealPhotoInfo'),ov=document.getElementById('photoOverlay');
   if(rev&&ov)rev.onclick=function(){ ov.classList.toggle('show'); };
   var n2=document.getElementById('2faNo'),n4=document.getElementById('network2'),n44=document.getElementById('network4'),warn=document.getElementById('wifiWarning');
-  if(n2)n2.onclick=function(){ if(document.getElementById('2faNotification'))document.getElementById('2faNotification').innerHTML='<p style="color:#2ecc71;padding:1rem">✅ Cuenta bloqueada. Bien hecho.</p>'; };
+  if(n2)n2.onclick=function(){ if(document.getElementById('2faNotification'))document.getElementById('2faNotification').innerHTML='<p style="color:#8bb5c2;padding:1rem">✅ Cuenta bloqueada. Bien hecho.</p>'; };
   if((n2||n4)&&warn){ [n2,n4,n44].forEach(function(el){ if(el)el.onclick=function(){ warn.style.display='block'; }; }); }
   update();
 })();

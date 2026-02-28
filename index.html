@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
-<body class="cyber-theme">
+<body class="cyber-theme matrix-theme">
+    <!-- Fondo Matrix 010101 -->
+    <div class="matrix-bg" id="matrixBg" aria-hidden="true"></div>
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
 
@@ -23,7 +25,7 @@
                 <p class="presenter">Pero que siempre está ahí</p>
                 <div class="example-badge">
                     <span class="example-icon">📊</span>
-                    <span class="example-text">+4.000 millones de registros filtrados en 2023</span>
+                    <span class="example-text">+4.000 millones de registros filtrados en 2025</span>
                 </div>
                 <div class="scroll-hint">
                     <span>↓ Desliza para comenzar ↓</span>
@@ -367,6 +369,79 @@
                     <p class="tip-title">💡 SOLUCIÓN ECONÓMICA</p>
                     <p class="tip-text">Una VPN cuesta <strong>menos de 3€/mes</strong> (NordVPN, Surfshark)</p>
                     <p class="tip-text">O usa tus datos móviles: 4G/5G son más seguros</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE OSINT: Modelo y herramientas -->
+        <section class="slide" id="slideOsint">
+            <div class="slide-content">
+                <div class="icon-pulse">🔍</div>
+                <h2>INTELIGENCIA ABIERTA</h2>
+                <h3 class="success-title">OSINT: Open Source Intelligence</h3>
+                
+                <p class="osint-def">Información obtenida de <strong>fuentes públicas</strong>: redes sociales, registros, foros, dominios, metadatos. Usado por investigadores, periodistas, equipos de ciberseguridad y, también, por atacantes.</p>
+
+                <div class="real-example">
+                    <div class="example-header">
+                        <span class="example-label">📐 MODELO OSINT (Ciclo)</span>
+                    </div>
+                    <div class="osint-cycle">
+                        <div class="cycle-step"><span class="step-num">1</span> Dirección</div>
+                        <span class="cycle-arrow">→</span>
+                        <div class="cycle-step"><span class="step-num">2</span> Recolección</div>
+                        <span class="cycle-arrow">→</span>
+                        <div class="cycle-step"><span class="step-num">3</span> Procesamiento</div>
+                        <span class="cycle-arrow">→</span>
+                        <div class="cycle-step"><span class="step-num">4</span> Análisis</div>
+                        <span class="cycle-arrow">→</span>
+                        <div class="cycle-step"><span class="step-num">5</span> Difusión</div>
+                    </div>
+                    <ul class="tip-list text-left">
+                        <li><strong>Dirección:</strong> Definir qué necesitas saber (objetivo, preguntas).</li>
+                        <li><strong>Recolección:</strong> Recopilar datos de fuentes abiertas (web, redes, DNS, etc.).</li>
+                        <li><strong>Procesamiento:</strong> Limpiar, normalizar y estructurar la información.</li>
+                        <li><strong>Análisis:</strong> Extraer conclusiones y patrones.</li>
+                        <li><strong>Difusión:</strong> Presentar resultados (informe, mapa, dashboard).</li>
+                    </ul>
+                </div>
+
+                <h4 class="tools-section-title">🛠️ HERRAMIENTAS OSINT</h4>
+                <div class="examples-grid osint-tools-grid">
+                    <div class="example-card">
+                        <div class="example-icon">🔗</div>
+                        <h4>Maltego</h4>
+                        <p class="tool-desc">Visualización de relaciones entre entidades (personas, dominios, emails, IPs). Ideal para mapear conexiones y enlazar datos.</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-icon">📧</div>
+                        <h4>theHarvester</h4>
+                        <p class="tool-desc">Recopila correos, subdominios, hosts y nombres a partir de un dominio. Fuentes: Google, Bing, LinkedIn, etc.</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-icon">🌐</div>
+                        <h4>Shodan</h4>
+                        <p class="tool-desc">Buscador de dispositivos conectados a internet (servidores, cámaras, IoT). Útil para ver exposición de activos.</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-icon">🕷️</div>
+                        <h4>SpiderFoot</h4>
+                        <p class="tool-desc">Automatiza la recolección: DNS, whois, redes sociales, vulnerabilidades. Genera informes de huella digital.</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-icon">⚙️</div>
+                        <h4>Recon-ng</h4>
+                        <p class="tool-desc">Framework en terminal con módulos para dominios, correos, perfiles y búsquedas en fuentes abiertas.</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-icon">🔎</div>
+                        <h4>Google Dorks</h4>
+                        <p class="tool-desc">Búsquedas avanzadas con operadores (site:, filetype:, inurl:) para encontrar información expuesta por error.</p>
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <p>💡 <strong>Uso ético:</strong> OSINT debe usarse en contextos legales (investigación, pentesting autorizado, periodismo). Revisa la ley y las condiciones de uso de cada fuente.</p>
                 </div>
             </div>
         </section>

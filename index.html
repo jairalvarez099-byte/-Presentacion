@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciberseguridad: Cuídate de quien no ves</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body class="cyber-theme">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Slides Container -->
+    <div class="slides-container" id="slidesContainer">
+        <!-- SLIDE 1: Portada -->
+        <section class="slide active" id="slide1">
+            <div class="slide-content">
+                <div class="title-animation">
+                    <h1 class="title-hero">CIBERSEGURIDAD</h1>
+                </div>
+                <h2 class="subtitle">El arte de cuidarte de <span class="highlight">alguien que no ves</span></h2>
+                <p class="presenter">Pero que siempre está ahí</p>
+                <div class="example-badge">
+                    <span class="example-icon">📊</span>
+                    <span class="example-text">+4.000 millones de registros filtrados en 2023</span>
+                </div>
+                <div class="scroll-hint">
+                    <span>↓ Desliza para comenzar ↓</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: El Mago Invisible + EJEMPLO REAL -->
+        <section class="slide" id="slide2">
+            <div class="slide-content">
+                <div class="emoji-container">🎭</div>
+                <h2>El <span class="gradient-text">Mago Invisible</span></h2>
+                
+                <!-- EJEMPLO REAL: Caso Twitter 2020 -->
+                <div class="real-example">
+                    <div class="example-header">
+                        <span class="example-label">📰 CASO REAL</span>
+                        <span class="example-year">2020</span>
+                    </div>
+                    <p class="example-title"><strong>El hackeo a Twitter:</strong> 130 cuentas verificadas</p>
+                    <div class="example-details">
+                        <p>🔸 <strong>Víctimas:</strong> Barack Obama, Elon Musk, Bill Gates</p>
+                        <p>🔸 <strong>El truco:</strong> Llamada telefónica falsa a empleados</p>
+                        <p>🔸 <strong>El daño:</strong> Estafa de Bitcoin por <strong>$120,000</strong></p>
+                    </div>
+                    <div class="example-lesson">
+                        <span class="lesson-icon">💡</span>
+                        <span class="lesson-text"><strong>Lección:</strong> No hicieron falta supercomputadoras, solo <strong>una llamada</strong></span>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stat">
+                        <span class="stat-number">43%</span>
+                        <span class="stat-label">de ataques van contra individuos</span>
+                    </div>
+                </div>
+                
+                <div class="interactive-demo" id="magicDemo">
+                    <p>Haz clic en el sombrero 🎩</p>
+                    <div class="hat-container" id="hatContainer">
+                        <span class="hat">🎩</span>
+                        <span class="hidden-message" id="hiddenMessage">¡Así de fácil acceden a tus datos!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: Phishing + EJEMPLOS -->
+        <section class="slide" id="slide3">
+            <div class="slide-content">
+                <div class="icon-pulse">📧</div>
+                <h2>PELIGRO INVISIBLE #1</h2>
+                <h3 class="danger-title">PHISHING</h3>
+                
+                <!-- EJEMPLO 1: Banco falso -->
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-icon">🏦</div>
+                        <h4>Ejemplo 1: Tu "banco" te escribe</h4>
+                        <div class="email-card fake">
+                            <div class="email-header">
+                                <span class="sender">Banco Santander</span>
+                                <span class="urgency">⚠️ URGENTE</span>
+                            </div>
+                            <p class="email-subject">Tu cuenta será bloqueada en 24 horas</p>
+                            <p class="email-body">"Haz clic aquí para verificar: <span class="fake-link">bancosantander.verifica-seguridad.com</span>"</p>
+                        </div>
+                        <p class="example-reality">🔍 <strong>La realidad:</strong> El banco NUNCA pide datos por email</p>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-icon">📦</div>
+                        <h4>Ejemplo 2: El paquete "perdido"</h4>
+                        <div class="email-card fake">
+                            <div class="email-header">
+                                <span class="sender">Correos Express</span>
+                                <span class="urgency">📦 ENTREGA</span>
+                            </div>
+                            <p class="email-subject">Tu paquete está retenido en aduanas</p>
+                            <p class="email-body">"Paga 2€ para liberarlo: <span class="fake-link">correos.pago-online.com</span>"</p>
+                        </div>
+                        <p class="example-reality">🔍 <strong>La realidad:</strong> Pagas 2€ y te vacían la cuenta</p>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-icon">📱</div>
+                        <h4>Ejemplo 3: El SMS del "banco"</h4>
+                        <div class="sms-card">
+                            <div class="sms-header">
+                                <span class="sms-sender">CaixaBank</span>
+                                <span class="sms-time">Ahora</span>
+                            </div>
+                            <p class="sms-body">"Se ha detectado un acceso sospechoso. Confirma tu identidad: https://cai.xa.bank/verificar"</p>
+                        </div>
+                        <p class="example-reality">🔍 <strong>La realidad:</strong> El enlace es falso (fíjate: cai.xa.bank no es caixabank.es)</p>
+                    </div>
+                </div>
+
+                <div class="tip-card" id="phishingTip">
+                    <p>⚠️ <strong>Los 3 errores que delatan un phishing:</strong></p>
+                    <ul class="tip-list">
+                        <li>1️⃣ Te genera URGENCIA (tiempo límite)</li>
+                        <li>2️⃣ El enlace NO coincide con la web oficial</li>
+                        <li>3️⃣ Te pide datos personales o dinero</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: Contraseñas + EJEMPLOS -->
+        <section class="slide" id="slide4">
+            <div class="slide-content">
+                <div class="icon-pulse">🔐</div>
+                <h2>PELIGRO INVISIBLE #2</h2>
+                <h3 class="danger-title">CONTRASEÑAS DÉBILES</h3>
+                
+                <!-- EJEMPLO: Tiempo de hackeo -->
+                <div class="real-example">
+                    <div class="example-header">
+                        <span class="example-label">⏱️ TIEMPO DE HACKEO</span>
+                    </div>
+                    <div class="hacking-times">
+                        <div class="time-item">
+                            <span class="password-example">"123456"</span>
+                            <span class="time-result red">1 segundo</span>
+                        </div>
+                        <div class="time-item">
+                            <span class="password-example">"contraseña"</span>
+                            <span class="time-result red">1 minuto</span>
+                        </div>
+                        <div class="time-item">
+                            <span class="password-example">"MiPerroMax2024"</span>
+                            <span class="time-result yellow">3 años</span>
+                        </div>
+                        <div class="time-item">
+                            <span class="password-example">"MiPerroMaxComeCroquetas2024!"</span>
+                            <span class="time-result green">+100 años</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJEMPLO: Caso real filtración -->
+                <div class="example-card breach-example">
+                    <div class="example-icon">💥</div>
+                    <h4>CASO REAL: Filtración de LinkedIn (2021)</h4>
+                    <p class="breach-detail"><strong>700 millones</strong> de usuarios expuestos</p>
+                    <p class="breach-detail">🔸 El 80% usaba la misma contraseña en otras webs</p>
+                    <p class="breach-detail">🔸 Hackers probaron esas claves en bancos y emails</p>
+                </div>
+
+                <div class="password-meter">
+                    <input type="text" id="passwordInput" placeholder="Escribe tu contraseña para probarla..." class="password-input">
+                    <div class="strength-meter" id="strengthMeter">
+                        <div class="strength-bar" id="strengthBar"></div>
+                    </div>
+                    <p class="strength-text" id="strengthText">Comienza a escribir...</p>
+                    <p class="example-hint" id="exampleHint"></p>
+                </div>
+                
+                <div class="tip-card">
+                    <p class="example-password">✨ <strong>Frase secreta de ejemplo:</strong> MiPerroMaxComeCroquetas2024!</p>
+                    <p class="example-password">✨ <strong>Otra opción:</strong> MeGustaElChocolateConLeche#23</p>
+                    <p class="example-password">✨ <strong>Para trabajo:</strong> Oficina_Madrid_4toPiso_2024$</p>
+                </div>
+                
+                <button class="action-btn" id="generatePassword">🎲 Generar frase segura</button>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: 2FA + EJEMPLO -->
+        <section class="slide" id="slide5">
+            <div class="slide-content">
+                <div class="icon-pulse">📱</div>
+                <h2>SUPERPODER DIGITAL</h2>
+                <h3 class="success-title">2FA: Doble Factor</h3>
+                
+                <!-- EJEMPLO: Cómo te salva -->
+                <div class="real-example">
+                    <div class="example-header">
+                        <span class="example-label">🛡️ EJEMPLO REAL</span>
+                    </div>
+                    <div class="story-example">
+                        <p class="story-title"><strong>La historia de Marta:</strong></p>
+                        <p class="story-text">Marta usaba "123456" en Instagram. Un hacker consiguió su clave.</p>
+                        <div class="story-comparison">
+                            <div class="without-2fa">
+                                <span class="story-badge bad">❌ Sin 2FA</span>
+                                <p>Hacker entró directo y publicó estafas.</p>
+                            </div>
+                            <div class="with-2fa">
+                                <span class="story-badge good">✅ Con 2FA</span>
+                                <p>Hacker necesitaba también su móvil → BLOQUEADO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EJEMPLO: Caso famoso -->
+                <div class="example-card">
+                    <div class="example-icon">🐦</div>
+                    <h4>El CEO de Twitter perdió su cuenta</h4>
+                    <p>🔸 Jack Dorsey fue hackeado en 2019</p>
+                    <p>🔸 <strong>¿Por qué?</strong> No tenía 2FA en su número de teléfono</p>
+                    <p>🔸 Hackers cambiaron su SIM y publicaron tweets racistas</p>
+                </div>
+
+                <div class="twofa-demo">
+                    <div class="phone-mockup">
+                        <div class="notification" id="2faNotification">
+                            <span class="app-icon">🏦</span>
+                            <div class="notification-content">
+                                <p class="notif-title">Banco</p>
+                                <p class="notif-text">Intento de acceso desde Madrid ¿Eres tú?</p>
+                                <div class="notif-buttons">
+                                    <button class="notif-btn yes" id="2faYes">✅ Sí, soy yo</button>
+                                    <button class="notif-btn no" id="2faNo">❌ No, bloquear</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="tip">✅ Actívalo YA en: Gmail • WhatsApp • Banco • Instagram</p>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: Redes Sociales + EJEMPLOS -->
+        <section class="slide" id="slide6">
+            <div class="slide-content">
+                <div class="icon-pulse">📸</div>
+                <h2>PELIGRO INVISIBLE #3</h2>
+                <h3 class="danger-title">REDES SOCIALES</h3>
+                
+                <!-- EJEMPLOS de sobreexposición -->
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-icon">🏠</div>
+                        <h4>Ejemplo 1: Las vacaciones</h4>
+                        <p class="example-scenario">"Me voy una semana a la playa 🏖️"</p>
+                        <p class="example-consequence">⚠️ Traducción: "Mi casa está vacía, pueden robarme"</p>
+                        <p class="example-real">🔸 <strong>Caso real:</strong> Banda de ladrones en 2019 siguió a 50 familias por Instagram</p>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-icon">👧</div>
+                        <h4>Ejemplo 2: Los hijos</h4>
+                        <p class="example-scenario">"Mi hija empieza el cole en el San Patricio 🎒"</p>
+                        <p class="example-consequence">⚠️ Ya saben dónde estudia, dónde esperarla</p>
+                        <p class="example-real">🔸 <strong>Alerta policial:</strong> No publiques uniformes ni nombres de colegios</p>
+                    </div>
+
+                    <div class="example-card">
+                        <div class="example-icon">🚗</div>
+                        <h4>Ejemplo 3: El coche nuevo</h4>
+                        <p class="example-scenario">"Mi nuevo Audi, matrícula 1234ABC 😎"</p>
+                        <p class="example-consequence">⚠️ Con la matrícula sacan tu DNI, teléfono y dirección</p>
+                        <p class="example-real">🔸 <strong>Dato:</strong> Por 1€ en internet consiguen tu domicilio con la matrícula</p>
+                    </div>
+                </div>
+
+                <div class="photo-analysis">
+                    <div class="photo-card">
+                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400" alt="Familia en casa" class="demo-photo">
+                        <div class="photo-overlay" id="photoOverlay">
+                            <span class="overlay-item">📍 Calle visible por la ventana</span>
+                            <span class="overlay-item">🏫 Colegio en la mochila</span>
+                            <span class="overlay-item">🚗 Matrícula del coche</span>
+                            <span class="overlay-item">🐕 Nombre de la mascota (posible contraseña)</span>
+                        </div>
+                    </div>
+                    <button class="reveal-btn" id="revealPhotoInfo">🔍 ¿Qué información regalas?</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: Wi-Fi Público + EJEMPLOS -->
+        <section class="slide" id="slide7">
+            <div class="slide-content">
+                <div class="icon-pulse">📡</div>
+                <h2>PELIGRO INVISIBLE #4</h2>
+                <h3 class="danger-title">WI-FI PÚBLICO</h3>
+                
+                <!-- EJEMPLO: El ataque del gemelo malvado -->
+                <div class="real-example">
+                    <div class="example-header">
+                        <span class="example-label">🎭 ATAQUE REAL: "El gemelo malvado"</span>
+                    </div>
+                    <div class="story-example">
+                        <p class="story-text"><strong>Escenario:</strong> Estás en un Starbucks. Ves dos redes:</p>
+                        <div class="network-comparison">
+                            <div class="network-safe">
+                                <span class="network-name">📶 Starbucks_WiFi</span>
+                                <span class="network-status">(la oficial)</span>
+                            </div>
+                            <div class="network-danger">
+                                <span class="network-name">📶 Starbucks_Free</span>
+                                <span class="network-status">⚠️ LA TRAMPA</span>
+                            </div>
+                        </div>
+                        <p class="story-text mt-2">El hacker creó una red con nombre similar. 15 personas se conectaron y <strong>entregaron sus datos</strong> sin saberlo.</p>
+                    </div>
+                </div>
+
+                <!-- EJEMPLO: Lo que puede ver un hacker -->
+                <div class="example-card">
+                    <div class="example-icon">👁️</div>
+                    <h4>En un Wi-Fi público sin VPN, el hacker ve:</h4>
+                    <ul class="hacker-view">
+                        <li>🔸 Tus contraseñas (si la web no tiene HTTPS)</li>
+                        <li>🔸 Los mensajes que envías</li>
+                        <li>🔸 Las fotos que subes</li>
+                        <li>🔸 Los números de tarjeta que introduces</li>
+                    </ul>
+                </div>
+
+                <div class="wifi-demo">
+                    <p class="demo-question">¿A cuál te conectarías?</p>
+                    <div class="wifi-networks">
+                        <div class="network safe" id="network1">
+                            📶 Aeropuerto_Oficial <span class="badge safe-badge">Necesita contraseña</span>
+                        </div>
+                        <div class="network danger" id="network2">
+                            📶 WiFi_Gratis_SinContraseña <span class="badge danger-badge">¡PELIGRO!</span>
+                        </div>
+                        <div class="network safe">
+                            📶 Hotel_Hilton <span class="badge safe-badge">Con VPN</span>
+                        </div>
+                        <div class="network danger" id="network4">
+                            📶 Free_Internet_Rapido <span class="badge danger-badge">Hacker esperando</span>
+                        </div>
+                    </div>
+                    
+                    <div class="warning-message" id="wifiWarning">
+                        ⚠️ El hacker te ve, tú no lo ves
+                    </div>
+                </div>
+
+                <!-- EJEMPLO: Solución práctica -->
+                <div class="tip-card">
+                    <p class="tip-title">💡 SOLUCIÓN ECONÓMICA</p>
+                    <p class="tip-text">Una VPN cuesta <strong>menos de 3€/mes</strong> (NordVPN, Surfshark)</p>
+                    <p class="tip-text">O usa tus datos móviles: 4G/5G son más seguros</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: El Mito + EJEMPLOS -->
+        <section class="slide" id="slide8">
+            <div class="slide-content">
+                <div class="icon-pulse">🧠</div>
+                <h2>EL MITO MÁS PELIGROSO</h2>
+                <h3 class="danger-title">"A MÍ NO ME VA A PASAR"</h3>
+                
+                <!-- EJEMPLOS de víctimas "normales" -->
+                <div class="real-example">
+                    <div class="example-header">
+                        <span class="example-label">😔 VÍCTIMAS COMO TÚ</span>
+                    </div>
+                    
+                    <div class="victim-story">
+                        <p class="victim-name">Ana, 34 años, profesora</p>
+                        <p class="victim-text">🔸 Compró en una web falsa de ropa</p>
+                        <p class="victim-text">🔸 Perdió <strong>450€</strong> y le vaciaron la cuenta</p>
+                        <p class="victim-lesson">💡 "Pensé que solo pasaba en las películas"</p>
+                    </div>
+
+                    <div class="victim-story">
+                        <p class="victim-name">Carlos, 28 años, informático</p>
+                        <p class="victim-text">🔸 Usaba la misma clave para todo</p>
+                        <p class="victim-text">🔸 Hackearon su email y de ahí su banco</p>
+                        <p class="victim-lesson">💡 "Y eso que trabajo con ordenadores..."</p>
+                    </div>
+
+                    <div class="victim-story">
+                        <p class="victim-name">Marta, 52 años, ama de casa</p>
+                        <p class="victim-text">🔸 Le llegó un SMS de "Su paquete está retenido"</p>
+                        <p class="victim-text">🔸 Pagó 1.50€ y le robaron 3.000€</p>
+                        <p class="victim-lesson">💡 "El mensaje parecía de verdad"</p>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-big">
+                        <span class="big-number">90%</span>
+                        <span class="big-label">de ataques empiezan por <strong>error humano</strong></span>
+                    </div>
+                    <div class="stat-big">
+                        <span class="big-number">1</span>
+                        <span class="big-label">clic puede costarte <strong>todo</strong></span>
+                    </div>
+                </div>
+
+                <div class="tip-card urgent">
+                    <p class="urgent-message">🚨 Si piensas "a mí no me pasa", ya eres el objetivo perfecto</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 9: Acciones Inmediatas + EJEMPLO PRÁCTICO -->
+        <section class="slide" id="slide9">
+            <div class="slide-content">
+                <h2>🚀 TUS PRÓXIMOS 5 MINUTOS</h2>
+                
+                <!-- EJEMPLO: Caso de éxito -->
+                <div class="success-story">
+                    <div class="success-icon">🏆</div>
+                    <p class="success-text"><strong>Pedro siguió estos pasos y evitó una estafa:</strong></p>
+                    <p class="success-detail">Recibió un SMS de "Banco". Como tenía 2FA, el hacker no pudo entrar. Revisó el enlace y era falso. Lo borró.</p>
+                </div>
+
+                <div class="checklist">
+                    <div class="checklist-item" id="check1">
+                        <input type="checkbox" id="task1">
+                        <label for="task1">📧 Revisar correos sospechosos (como los ejemplos)</label>
+                        <span class="check-hint">Ej: ¿Tienes algún "Netflix" pidiendo datos?</span>
+                    </div>
+                    <div class="checklist-item" id="check2">
+                        <input type="checkbox" id="task2">
+                        <label for="task2">🔐 Activar 2FA en el banco</label>
+                        <span class="check-hint">Ej: BBVA, Santander, CaixaBank: en Ajustes de seguridad</span>
+                    </div>
+                    <div class="checklist-item" id="check3">
+                        <input type="checkbox" id="task3">
+                        <label for="task3">🔑 Cambiar contraseña por frase</label>
+                        <span class="check-hint">Ej: "MiHijoJuegaAlFutbol2024!"</span>
+                    </div>
+                    <div class="checklist-item" id="check4">
+                        <input type="checkbox" id="task4">
+                        <label for="task4">📱 Revisar privacidad en redes</label>
+                        <span class="check-hint">Ej: Instagram → Configuración → Privacidad → "Solo amigos"</span>
+                    </div>
+                    <div class="checklist-item" id="check5">
+                        <input type="checkbox" id="task5">
+                        <label for="task5">📡 Borrar redes WiFi guardadas</label>
+                        <span class="check-hint">Ej: Esas "WiFi gratis" del aeropuerto de hace 2 años</span>
+                    </div>
+                </div>
+
+                <div class="final-message">
+                    <p class="quote">"En internet, lo más caro que puedes pagar es la <strong>confianza mal puesta</strong>"</p>
+                    <p class="subquote">Si no lo ves, no confíes sin verificar</p>
+                    
+                    <!-- Ejemplo final para recordar -->
+                    <div class="remember-example">
+                        <p class="remember-title">📌 RECUERDA ESTE EJEMPLO:</p>
+                        <p class="remember-text">Si alguien toca a tu puerta diciendo que es de "Movistar" y pide entrar, ¿le abres?<br/>
+                        <strong>Pues online es igual: no abras la puerta a extraños.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
